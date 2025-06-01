@@ -19,7 +19,7 @@ app.listen(port, async () => {
   console.log(`Server listening on port ${port}`);
 
   try {
-    const conn = await mongoose.connect('mongodb://localhost:27017/payrollDb');
+    const conn = await mongoose.connect('mongodb+srv://jamie:jamie123@cluster0.tklpeg5.mongodb.net/payrollDb?retryWrites=true&w=majority&appName=Cluster0');
     console.log(`Connected to Payroll Services: ${conn.connection.host}`);
   } catch (error) {
     console.error('Error connecting to MongoDB:', error);
